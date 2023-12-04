@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "WK9LicytPDCEYvFNpnl+dckl4/3q+n2ZhGlTjpzdLjnVpqL/BocKGwxK0FkNihqxeeKLHo9kpV+IjtN6sQOsBw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\albin.forsberg1\\Documents\\Programering\\Topdowns-spel\\Topdowns-spel\\Topdowns-spel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\albin.forsberg1\\.nuget\\packages\\raylib-cs\\4.5.0.4\\raylib-cs.4.5.0.4.nupkg.sha512",
+    "C:\\Users\\albin.forsberg1\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
