@@ -10,29 +10,31 @@ Vector2 position = new Vector2(0, 0);
 
 Vector2 movement = new Vector2(5, 5);
 
-Color hotpink = new Color(255, 105, 180, 255);
+Color red = new Color(255, 0, 0, 255);
 
-Rectangle characterRect = new Rectangle(300, 400, 64, 64);
+Rectangle playerRect = new Rectangle(300, 400, 64, 64);
+Rectangle enemyRect = new Rectangle (200, 200, 64, 64);
 
+Rectangle overlap = Raylib.GetCollisionRec(playerRect, enemyRect);
 while (!Raylib.WindowShouldClose())
 {
     // position += movement;
 
     if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT)){
-        characterRect.x += movement.X;
+        playerRect.x += movement.X;
         
     }
 
     if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT)){
-        characterRect.x -= movement.X;
+        playerRect.x -= movement.X;
     }
 
     if(Raylib.IsKeyDown(KeyboardKey.KEY_UP)){
-        characterRect.y -= movement.Y;
+        playerRect.y -= movement.Y;
     }
 
     if(Raylib.IsKeyDown(KeyboardKey.KEY_DOWN)){
-        characterRect.y += movement.Y;
+        playerRect.y += movement.Y;
     }
 
 
@@ -47,7 +49,11 @@ while (!Raylib.WindowShouldClose())
     Raylib.BeginDrawing();
     Raylib. ClearBackground(Color.GOLD);
 
-    Raylib.DrawRectangle(10, 40, 300, 50, Color.BLACK);
-    Raylib.DrawRectangleRec(characterRect, hotpink);
+    
+    Raylib.DrawRectangleRec(playerRect, red);
+    Raylib.DrawRectangleRec(enemyRect, Color.BLACK);
+    Raylib.DrawRectangleRec(overlap, Color.ORANGE);
+    
     Raylib.EndDrawing();
+
 }
